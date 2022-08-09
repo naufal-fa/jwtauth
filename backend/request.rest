@@ -1,0 +1,65 @@
+GET http://localhost:3001/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJBenp1cmEiLCJlbWFpbCI6ImF6enVyYUBnbWFpbC5jb20iLCJpYXQiOjE2NTkyMzQzNjYsImV4cCI6MTY1OTIzNDM4Nn0.DgiBnMiStAqZf6GB-sTm_EhndP7ksIqbkTGnpfY7_HQ
+
+###
+POST http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "name": "Azzura",
+    "email": "azzura@gmail.com",
+    "password": "123",
+    "confirmPassword": "123"
+}
+
+###
+GET http://localhost:3001/user
+
+###
+POST http://localhost:3001/login
+Content-Type: application/json
+
+{
+    "email": "azzura@gmail.com",
+    "password": "123"
+}
+
+###
+GET http://localhost:3001/me
+
+###
+GET http://localhost:3001/token
+
+###
+DELETE  http://localhost:3001/logout
+
+
+
+# PRODUCTS
+
+###
+GET  http://localhost:3001/product
+
+###
+GET  http://localhost:3001/product/edit/3
+
+###
+POST http://localhost:3001/product/add
+Content-Type: application/json
+
+{
+    "title" : "Telur",
+    "price" : 3500
+}
+
+###
+PATCH http://localhost:3001/product/5
+Content-Type: application/json
+
+{
+    "title" : "Sayur",
+    "price" : 2000
+}
+
+###
+DELETE http://localhost:3001/product/5
